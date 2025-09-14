@@ -10,3 +10,29 @@ Este projeto foi desenvolvido como parte da UC de Programação de Soluções Co
 - Listagem de usuários, projetos e equipes.
 - Persistência de dados em memória utilizando `ArrayList`.
 - Tratamento de erros para entradas inválidas.
+
+## Tecnologias Utilizadas
+- Linguagem: Java
+- Estruturas de Dados: `ArrayList`
+
+```bash
+javac src/*.java
+java src.Main
+```
+
+## Estrutura do Projeto
+- `Usuario.java`: Classe para representar os usuários do sistema.
+- `Projeto.java`: Classe para representar os projetos do sistema.
+- `Equipe.java`: Classe para representar as equipes do sistema.
+- `Pessoa.java`: Classe base para herança.
+- `Repositorio.java`: Classe para gerenciar a persistência de dados em memória.
+- `Main.java`: Classe principal com o menu interativo.
+
+## Autores
+Desenvolvido como parte do curso de Análise e Desenvolvimento de Sistemas (ADS).
+- Projeto Aplicado A3: Programação de soluções computacionais - DIGITAL
+    - Turma 8439111 - PROGRAMAÇÃO DE SOLUÇÕES COMPUTACIONAIS (8C) - Digital 2025/2
+        - Valdinei da Silva Ferreira
+        - Ailton Kayky Cordeiro da Silva
+        - Rodolfo Hernani Costa de Oliveira
+        - Carlos Eduardo Oliveira da Silva
