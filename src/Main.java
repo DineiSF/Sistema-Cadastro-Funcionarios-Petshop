@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Repositorio repositorio = Repositorio.getInstancia();
+        Repositorio repositorio = Repositorio.getInstance();
         Scanner scanner = new Scanner(System.in);
         int opcao = -1; // Inicializar com valor padrão
 

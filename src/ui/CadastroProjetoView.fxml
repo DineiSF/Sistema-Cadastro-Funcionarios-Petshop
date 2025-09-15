@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Font?>
+<?import javafx.collections.*?>
+<?import java.lang.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="ui.CadastroProjetoController">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+    
+    <top>
+        <VBox alignment="CENTER" spacing="10">
+            <Label text="Cadastro de Projeto" style="-fx-font-size: 24px;">
+                <font>
+                    <Font name="System Bold" size="24"/>
+                </font>
+            </Label>
+            <Separator/>
+        </VBox>
+    </top>
+    
+    <center>
+        <GridPane hgap="10" vgap="15">
+            <padding>
+                <Insets top="20" right="0" bottom="20" left="0"/>
+            </padding>
+            
+            <!-- Nome -->
+            <Label text="Nome do Projeto:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+            <TextField fx:id="nomeField" GridPane.rowIndex="0" GridPane.columnIndex="1" prefWidth="300"/>
+            
+            <!-- Descrição -->
+            <Label text="Descrição:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+            <TextArea fx:id="descricaoField" GridPane.rowIndex="1" GridPane.columnIndex="1" prefHeight="100"/>
+            
+            <!-- Data de Início -->
+            <Label text="Data de Início:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+            <DatePicker fx:id="dataInicioField" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+            
+            <!-- Data de Término Prevista -->
+            <Label text="Data de Término:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+            <DatePicker fx:id="dataTerminoField" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+            
+            <!-- Status -->
+            <Label text="Status:" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+            <ComboBox fx:id="statusComboBox" GridPane.rowIndex="4" GridPane.columnIndex="1" prefWidth="300">
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="Planejado"/>
+                        <String fx:value="Em andamento"/>
+                        <String fx:value="Concluído"/>
+                        <String fx:value="Cancelado"/>
+                    </FXCollections>
+                </items>
+            </ComboBox>
+        </GridPane>
+    </center>
+    
+    <bottom>
+        <HBox spacing="10" alignment="CENTER_RIGHT">
+            <Button text="Cancelar" onAction="#handleCancelar" prefWidth="100"/>
+            <Button text="Salvar" onAction="#handleSalvar" prefWidth="100" defaultButton="true"/>
+        </HBox>
+    </bottom>
+</BorderPane>

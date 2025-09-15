@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="ui.MainController" 
+            stylesheets="@styles.css">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+    
+    <top>
+        <VBox alignment="CENTER" spacing="10">
+            <Label text="Sistema de Cadastro - Petshop" style="-fx-font-size: 24px;">
+                <font>
+                    <Font name="System Bold" size="24"/>
+                </font>
+            </Label>
+            <Separator/>
+        </VBox>
+    </top>
+    
+    <center>
+        <VBox spacing="15" alignment="CENTER">
+            <padding>
+                <Insets top="20" right="0" bottom="20" left="0"/>
+            </padding>
+            
+            <HBox spacing="10" alignment="CENTER">
+                <Button text="Cadastrar Usuário" onAction="#handleCadastrarUsuario" prefWidth="200"/>
+                <Button text="Listar Usuários" onAction="#handleListarUsuarios" prefWidth="200"/>
+            </HBox>
+            
+            <HBox spacing="10" alignment="CENTER">
+                <Button text="Cadastrar Projeto" onAction="#handleCadastrarProjeto" prefWidth="200"/>
+                <Button text="Listar Projetos" onAction="#handleListarProjetos" prefWidth="200"/>
+            </HBox>
+            
+            <HBox spacing="10" alignment="CENTER">
+                <Button text="Cadastrar Equipe" onAction="#handleCadastrarEquipe" prefWidth="200"/>
+                <Button text="Listar Equipes" onAction="#handleListarEquipes" prefWidth="200"/>
+            </HBox>
+        </VBox>
+    </center>
+    
+    <bottom>
+        <HBox alignment="CENTER">
+            <Button text="Sair" onAction="#handleSair" prefWidth="100"/>
+        </HBox>
+    </bottom>
+</BorderPane>
