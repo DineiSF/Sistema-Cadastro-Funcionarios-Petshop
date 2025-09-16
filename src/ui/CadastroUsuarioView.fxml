@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Font?>
+<?import javafx.collections.*?>
+<?import java.lang.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="ui.CadastroUsuarioController">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+    
+    <top>
+        <VBox alignment="CENTER" spacing="10">
+            <Label text="Cadastro de Usuário" style="-fx-font-size: 24px;">
+                <font>
+                    <Font name="System Bold" size="24"/>
+                </font>
+            </Label>
+            <Separator/>
+        </VBox>
+    </top>
+    
+    <center>
+        <GridPane hgap="10" vgap="15">
+            <padding>
+                <Insets top="20" right="0" bottom="20" left="0"/>
+            </padding>
+            
+            <!-- Nome -->
+            <Label text="Nome Completo:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+            <TextField fx:id="nomeField" GridPane.rowIndex="0" GridPane.columnIndex="1" prefWidth="300"/>
+            
+            <!-- CPF -->
+            <Label text="CPF:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+            <TextField fx:id="cpfField" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+            
+            <!-- Email -->
+            <Label text="Email:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+            <TextField fx:id="emailField" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+            
+            <!-- Cargo -->
+            <Label text="Cargo:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+            <ComboBox fx:id="cargoComboBox" GridPane.rowIndex="3" GridPane.columnIndex="1" prefWidth="300">
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="Administrador"/>
+                        <String fx:value="Atendente"/>
+                        <String fx:value="Veterinário"/>
+                        <String fx:value="Tosador"/>
+                    </FXCollections>
+                </items>
+            </ComboBox>
+            
+            <!-- Login -->
+            <Label text="Login:" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+            <TextField fx:id="loginField" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+            
+            <!-- Senha -->
+            <Label text="Senha:" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+            <PasswordField fx:id="senhaField" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+        </GridPane>
+    </center>
+    
+    <bottom>
+        <HBox spacing="10" alignment="CENTER_RIGHT">
+            <Button text="Cancelar" onAction="#handleCancelar" prefWidth="100"/>
+            <Button text="Salvar" onAction="#handleSalvar" prefWidth="100" defaultButton="true"/>
+        </HBox>
+    </bottom>
+</BorderPane>
